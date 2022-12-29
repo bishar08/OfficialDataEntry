@@ -9,7 +9,7 @@ import time
 
 st.set_page_config(page_title='Election Analysis',page_icon="chart_with_upwards_trend",)
 
-st.title("2022 Election Data Analysis.")
+st.write("<h2 style='margin-top:-20px;'>Garissa Township MP - 2023 By-Election.</h2>",unsafe_allow_html=True)
 col1, col2 = st.columns(2)
 dfward = pd.read_excel("Book1.xlsx",sheet_name='Sheet2')
 dfpoling=pd.read_excel("Book1.xlsx",sheet_name='df')
@@ -137,9 +137,12 @@ footer="""
 st.markdown(footer,unsafe_allow_html=True) 
 
 footer="""<style>
+body{
+	background-color:#FD8A8A;
+}
 a:link , a:visited{
 color: blue;
-background-color: transparent;
+background-color: #243763;
 text-decoration: underline;
 }
 
@@ -154,13 +157,13 @@ position: fixed;
 left: 0;
 bottom: 0;
 width: 100%;
-background-color: white;
-color: black;
+background-color: #243763;
+color: white;
 text-align: center;
 }
 </style>
 <div class="footer">
-<p>Developed with ❤ by <a style='display: block; text-align: center;' href="http://networkia-tech.ga/" target="_blank">Networkia IT Solutions</a></p>
+<p>Developed with ❤ by <a style='display: block; text-align: center;color:white;' href="http://networkia-tech.ga/" target="_blank">Networkia IT Solutions</a></p>
 </div>
 """
 st.markdown(footer,unsafe_allow_html=True)
